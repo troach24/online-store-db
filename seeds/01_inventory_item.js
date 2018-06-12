@@ -18,3 +18,5 @@ exports.seed = function(knex, Promise) {
       return knex.raw("ALTER SEQUENCE inventory_id_seq RESTART WITH 4;")
     })
 };
+
+// stretch: implement 'npm i joi' validator to validate data entry

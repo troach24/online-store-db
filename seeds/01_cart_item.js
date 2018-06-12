@@ -7,6 +7,7 @@ exports.seed = function(knex, Promise) {
       return knex('cart').insert([
         {
           id: 1,
+          // inventory_id: inventory.id,
           quantity: 4
         },
       ]);

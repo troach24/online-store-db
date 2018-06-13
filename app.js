@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
@@ -12,7 +13,7 @@ const buyRouter = require('./routes/buy')
 const sellRouter = require('./routes/sell');
 const newItemRouter = require('./routes/new-item');
 
-
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

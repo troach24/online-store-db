@@ -3,7 +3,6 @@ const router = express.Router();
 
 const queries = require('../inventory-queries');
 
-
 router.get("/", (request, response, next) => {
     queries.list().then(inventory => {
         response.json({inventory});

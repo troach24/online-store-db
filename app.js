@@ -9,9 +9,6 @@ const app = express();
 const indexRouter = require('./routes/index');
 const inventoryRouter = require('./routes/inventory');
 const cartRouter = require('./routes/cart');
-const buyRouter = require('./routes/buy')
-const sellRouter = require('./routes/sell');
-const newItemRouter = require('./routes/new-item');
 
 app.use(cors());
 app.use(logger('dev'));
@@ -33,13 +30,9 @@ app.get('/', (req, res) => {
   });
 });
 
-
 app.use('/', indexRouter);
 app.use('/inventory', inventoryRouter);
 app.use('/cart', cartRouter);
-app.use('/buy', buyRouter);
-app.use('/sell', sellRouter);
-app.use('/new-item', newItemRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -13,7 +13,7 @@ exports.seed = function(knex, Promise) {
         },
       ]);
     }).then(() => {
-      return knex.raw("ALTER SEQUENCE inventory_id_seq RESTART;")
+      return knex.raw("ALTER SEQUENCE inventory_id_seq RESTART WITH 1;")
     })
 };
 

@@ -5,12 +5,11 @@ exports.seed = function(knex, Promise) {
       return knex('cart').insert([
         {
           id: 1,
-          // keep for a sec ;)
-          // inventory_id: inventory.id,
+          inventory_id: 1,
           quantity: 1
         },
       ]);
     }).then(() => {
-      return knex.raw("ALTER SEQUENCE cart_id_seq RESTART WITH 1;")
+      return knex.raw("ALTER SEQUENCE cart_id_seq RESTART WITH 2;")
     })
 };

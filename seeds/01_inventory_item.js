@@ -13,8 +13,9 @@ exports.seed = function(knex, Promise) {
         },
       ]);
     }).then(() => {
-      return knex.raw("ALTER SEQUENCE inventory_id_seq RESTART WITH 1;")
+      return knex.raw("ALTER SEQUENCE inventory_id_seq RESTART WITH 2;")
     })
 };
 
+// + "DELETE FROM inventory_id_seq WHERE id=1;"
 // stretch: implement 'npm i joi' validator to validate data entry

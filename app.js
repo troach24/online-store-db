@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
@@ -9,20 +11,13 @@ const app = express();
 const indexRouter = require('./routes/index');
 const inventoryRouter = require('./routes/inventory');
 const cartRouter = require('./routes/cart');
+const acceptPaymentRouter = require ('./routes/accept-payment');
 
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-// keep for a sec ;)
-
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-//   res.header('Access-Control-Allow-Origin', '*')
-//   next()
-// })
 
 app.get('/', (req, res) => {
   res.json({
@@ -33,6 +28,7 @@ app.get('/', (req, res) => {
 app.use('/', indexRouter);
 app.use('/inventory', inventoryRouter);
 app.use('/cart', cartRouter);
+app.use('/accept-payment', acceptPaymentRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -14,6 +14,7 @@ router.post('/', (req, res) => {
     description: 'One stop shop',
     source: token,
   });
+  console.log(charge);
 
   charge.then(result => {
     res.json(result);

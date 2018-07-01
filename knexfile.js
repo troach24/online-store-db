@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/online-store-db'
+    connection: 'postgres://localhost/eazy-market'
   },
 
   production: {

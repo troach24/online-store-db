@@ -4,7 +4,12 @@ const router = express.Router();
 const queries = require('../inventory-queries');
 
 router.get("/", (request, response, next) => {
-    queries.list().then(inventory => {
+    console.log('get inventory');
+    var inv = queries.list();
+    console.log('inv: ', inv);
+
+   queries.list().then(inventory => {
+        // console.log('inv: ', inventory);
         response.json({inventory});
     }).catch(next);
 });

@@ -13,6 +13,10 @@ npm run dev
 
 ```
 
+### Database Visualization
+
+![](https://www.lucidchart.com/publicSegments/view/b8be1478-2b7a-45e4-bfca-57d5062d838b/image.png)
+
 ### CRUD Functionality
 Users can fully consume this API on both the inventory and cart tables:
 - **Read**: Each of the respective 'Buy', 'Sell', and 'Cart' tables populate data from the database on page load.

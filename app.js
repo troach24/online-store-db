@@ -21,7 +21,8 @@ app.use(cookieParser());
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Welcome to online store API! 🙌 💸'
+    message: 
+    'Welcome to online store API! 🙌 💸 Use /inventory or /cart routes to see each datatable';
   });
 });
 

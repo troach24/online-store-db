@@ -9,7 +9,6 @@ router.get("/", (request, response, next) => {
     console.log('inv: ', inv);
 
    queries.list().then(inventory => {
-        // console.log('inv: ', inventory);
         response.json({inventory});
     }).catch(next);
 });

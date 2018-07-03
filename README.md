@@ -1,6 +1,6 @@
 # Eazy Marketplace (Server)
 
-> A vue.js client for online store project
+Server side code for a full stack Vue.js CRUD application that simulates an online marketplace experience.
 
 ## Client Setup
 

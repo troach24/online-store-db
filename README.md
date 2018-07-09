@@ -45,3 +45,6 @@ When a user fills out the stripe payment form, a token is created and sent to th
 Check out the live demo [HERE](https://eazy-marketplace.firebaseapp.com/#/)!
 
 Please do not hesitate to email me at travis.roach24@gmail.com if you have any recommendations!
+
+### License
+[MIT](https://github.com/troach24/online-store-db/blob/master/LICENSE)
